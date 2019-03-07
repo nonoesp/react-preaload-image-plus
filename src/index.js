@@ -38,7 +38,7 @@ class PreloadImage extends React.Component {
       src: `url(${this.props.src})`
     });
 
-    this.preloader.src = this.props.src;
+    if (this.preloader) this.preloader.src = this.props.src;
   }
 
   componentWillUnmount() {
